@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SplashScreen from "./components/splashscreen";
-import HomeScreen from "./components/homescreen";
+import LoginScreen from "./components/loginscreen";
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -14,7 +14,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">{showSplash ? <SplashScreen /> : <HomeScreen />}</div>
+    <div className="App">{showSplash ? <SplashScreen /> : <LoginScreen />}</div>
   );
 }
 

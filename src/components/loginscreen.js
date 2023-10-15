@@ -1,6 +1,6 @@
 import React from "react";
 
-function login() {
+function loginscreen() {
   return (
     <div>
       <h2> Mtu Security Centre </h2>
@@ -8,4 +8,4 @@ function login() {
   );
 }
 
-export default login;
+export default loginscreen;
