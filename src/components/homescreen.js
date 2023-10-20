@@ -13,18 +13,31 @@ function homescreen() {
         }}
         className="title"
       >
-        <h1> Security System Admin Panel </h1>
+        <h1>Security System Admin Panel</h1>
 
         {/* the switch */}
         <div className="switch">
-          <h2> The switch </h2>
+          <h2> System is Armed </h2>
         </div>
       </div>
 
-      {/* Logs, thumbnails for the video */}
+      {/* Logs 
+      <div className="logs">
+        <h2> Logs </h2>
+
+        <div>
+          <h2> 300 </h2>
+        </div>
+      </div>
+      */}
+
       <div className="logCards">
-        <p> This is my log </p>
-        <div></div>
+        {/* first card */}
+        <div className="cards">
+          <h2> hello </h2>
+        </div>
+
+        {/* second card */}
       </div>
     </div>
   );

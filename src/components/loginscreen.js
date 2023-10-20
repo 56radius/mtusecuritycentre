@@ -1,12 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-//importng css file code
 import ".././css/loginscreen.css";
-
-//importing logo
 import logo from ".././images/logo.png";
 
 function LoginScreen() {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate("/home");
+  };
+
   return (
     <div className="login-container">
       <div className="left">
@@ -30,7 +34,9 @@ function LoginScreen() {
             <label htmlFor="password">Password</label>
             <input type="password" id="password" name="password" />
           </div>
-          <button type="submit">Login</button>
+          <button type="button" onClick={handleLogin}>
+            Login
+          </button>
         </form>
       </div>
     </div>

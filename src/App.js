@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SplashScreen from "./components/splashscreen";
 import LoginScreen from "./components/loginscreen";
+import HomeScreen from "./components/homescreen";
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -14,7 +16,17 @@ function App() {
   }, []);
 
   return (
-    <div className="App">{showSplash ? <SplashScreen /> : <LoginScreen />}</div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route
+            path="/"
+            element={showSplash ? <SplashScreen /> : <LoginScreen />}
+          />
+          <Route path="/home" element={<HomeScreen />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
