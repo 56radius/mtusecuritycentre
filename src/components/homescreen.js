@@ -1,16 +1,23 @@
 import React from "react";
+import Switch from "@mui/material/Switch";
 import ".././css/homescreen.css";
 
-//importing images
+// Importing images
 import FirstThumbnail from ".././images/logo.png";
 
 function HomeScreen() {
   return (
     <div>
-      <div className="title">
+      <div
+        className="title"
+        style={{
+          flexDirection: "column",
+        }}
+      >
         <h1>Security System Admin Panel</h1>
-        <div className="switch">
+        <div className="switch" style={{ flexDirection: "row" }}>
           <h2>System is Armed</h2>
+          <Switch color="primary" />
         </div>
       </div>
 
@@ -25,7 +32,7 @@ function HomeScreen() {
             }}
           />
         </div>
-        <p className="text-content">This is your card content.</p>
+        <p className="text-content">Person Mode detected</p>
       </div>
     </div>
   );
