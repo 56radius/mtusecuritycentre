@@ -2,6 +2,7 @@ import React from "react";
 import ".././css/homescreen.css";
 
 //importing images
+import FirstThumbnail from ".././images/logo.png";
 
 function HomeScreen() {
   return (
@@ -14,7 +15,17 @@ function HomeScreen() {
       </div>
 
       <div className="card">
-        <p>This is your card content.</p>
+        <div className="imageCover">
+          <img
+            src={FirstThumbnail}
+            alt="thumbnail"
+            style={{
+              width: 100,
+              height: 50,
+            }}
+          />
+        </div>
+        <p className="text-content">This is your card content.</p>
       </div>
     </div>
   );

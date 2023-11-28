@@ -1,4 +1,7 @@
+/* homescreen.css */
+
 .title {
+  display: flex;
   justify-content: center;
   text-align: center;
 }
@@ -6,8 +9,27 @@
 .card {
   border: 1px solid #000; /* Border width and color */
   padding: 10px; /* Add padding to the card content */
-  margin: 10px; /* Add margin around the card */
+  margin: auto; /* Center the card horizontally and vertically */
   border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff; /* Card background color */
+  width: 50%;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Arrange children in a row */
+}
+
+.imageCover {
+  border: 1px solid #000; /* Border around the image */
+  padding: 10px; /* Add padding to the image container */
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-content {
+  padding: 10px; /* Add padding to the text content */
+  flex: 1; /* Allow text content to expand and fill available space */
 }
