@@ -17,17 +17,24 @@ function HomeScreen() {
       </div>
 
       <div className="card">
-        <div className="imageCover">
-          <img
-            src={FirstThumbnail}
-            alt="thumbnail"
-            style={{
-              width: 100,
-              height: 50,
-            }}
-          />
-        </div>
+        <button style={{ 
+          width: "22%", 
+          background: "transparent" 
+          }}>
+          <div className="imageCover">
+            <img
+              src={FirstThumbnail}
+              alt="thumbnail"
+              style={{
+                width: 100,
+                height: 50,
+              }}
+            />
+          </div>
+        </button>
         <p className="text-content">Person Mode detected</p>
+        <br />
+        <p className="text-content"> July 4 2023 @ 4:45pm </p>
       </div>
     </div>
   );
