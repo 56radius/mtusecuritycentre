@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Switch from "@mui/material/Switch";
 import ".././css/homescreen.css";
 
@@ -6,6 +7,7 @@ import ".././css/homescreen.css";
 import FirstThumbnail from ".././images/logo.png";
 
 function HomeScreen() {
+  const navigate = useNavigate();
   return (
     <div className="container">
       <div className="title">
@@ -17,10 +19,13 @@ function HomeScreen() {
       </div>
 
       <div className="card">
-        <button style={{ 
-          width: "22%", 
-          background: "transparent" 
-          }}>
+        <button
+          onClick={() => navigate("/video")}
+          style={{
+            width: "22%",
+            background: "transparent",
+          }}
+        >
           <div className="imageCover">
             <img
               src={FirstThumbnail}
