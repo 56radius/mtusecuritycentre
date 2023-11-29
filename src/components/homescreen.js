@@ -7,15 +7,10 @@ import FirstThumbnail from ".././images/logo.png";
 
 function HomeScreen() {
   return (
-    <div>
-      <div
-        className="title"
-        style={{
-          flexDirection: "column",
-        }}
-      >
+    <div className="container">
+      <div className="title">
         <h1>Security System Admin Panel</h1>
-        <div className="switch" style={{ flexDirection: "row" }}>
+        <div className="switch-container">
           <h2>System is Armed</h2>
           <Switch color="primary" />
         </div>

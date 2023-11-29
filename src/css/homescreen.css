@@ -1,11 +1,4 @@
 /* homescreen.css */
-
-.title {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
 .card {
   border: 1px solid #000; /* Border width and color */
   padding: 10px; /* Add padding to the card content */
@@ -21,7 +14,6 @@
 .imageCover {
   border: 1px solid #000; /* Border around the image */
   padding: 10px; /* Add padding to the image container */
-
 }
 
 img {
@@ -32,4 +24,27 @@ img {
 .text-content {
   padding: 10px; /* Add padding to the text content */
   flex: 1; /* Allow text content to expand and fill available space */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* This ensures that the container takes the full height of the viewport */
+}
+
+.title {
+  text-align: center;
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.switch-container h2 {
+  margin-right: 10px; /* Adjust the margin as needed */
 }
