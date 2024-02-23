@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ".././css/SplashScreen.css";
 
+//importing logo
+import logo from ".././images/logo.png";
+
 function SplashScreen() {
   const [showSplash, setShowSplash] = useState(true);
 
@@ -14,7 +17,7 @@ function SplashScreen() {
 
   return (
     <div className={`splash-screen ${showSplash ? "show" : "hide"}`}>
-      <p> WELCOME TO MTU SECURITY CENTRE </p>
+      <img src={logo} alt="logo" />
     </div>
   );
 }

@@ -82,7 +82,9 @@ function HomeScreen() {
           >
             Person Mode detected
           </p>
-          <p style={{ marginBottom: "10px" }}>July 4, 2023 @ 4:45pm</p>
+          <p style={{ marginBottom: "0px", bottom: "30px" }}>
+            July 4, 2023 @ 4:45pm
+          </p>
         </div>
       </div>
 
