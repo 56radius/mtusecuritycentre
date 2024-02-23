@@ -31,9 +31,18 @@ function HomeScreen() {
           <Switch
             sx={{
               "& .MuiSwitch-thumb": {
-                color: "red",
+                width: 20,
+                height: 20,
+                boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.25)",
               },
               "& .MuiSwitch-track": {
+                borderRadius: 20,
+                backgroundColor: "#D6D6D6",
+              },
+              "& .Mui-checked .MuiSwitch-thumb": {
+                backgroundColor: "red", // iOS blue color
+              },
+              "& .Mui-checked .MuiSwitch-track": {
                 backgroundColor: "red",
               },
             }}
@@ -42,13 +51,6 @@ function HomeScreen() {
           />
         </div>
       </div>
-      {/* logs text and nummber list  
-      <div style={{ flexDirection: "row" }} className="logs">
-        <h2>Logs</h2>
-      </div>
-      <div className="helo">
-        <h2>Helo</h2>
-      </div> */}
 
       {/* Card for motion detection */}
       <div className="card">
@@ -70,19 +72,12 @@ function HomeScreen() {
             />
           </div>
         </button>
-        <p
-          style={{
-            fontWeight: "bold",
-            marginBottom: "30",
-            flexDirection: "row",
-          }}
-          className="text-content"
-        >
-          Person Mode detected
-        </p>
-        <p style={{ marginBottom: 0 }} className="text-content">
-          July 4, 2023 @ 4:45pm
-        </p>
+        <div className="text-content">
+          <p style={{ fontWeight: "bold", marginBottom: "5px" }}>
+            Person Mode detected
+          </p>
+          <p style={{ marginBottom: 0 }}>July 4, 2023 @ 4:45pm</p>
+        </div>
       </div>
     </div>
   );
