@@ -13,8 +13,10 @@ function HomeScreen() {
       <div className="title">
         <h1>Security System Admin Panel</h1>
         <div className="switch-container">
-          <h2>System is Armed</h2>
-          <Switch color="primary" />
+          <h2>
+            System is <span style={{ color: "red" }}>Armed</span>
+          </h2>
+          <Switch color="secondary" />
         </div>
       </div>
 
@@ -37,9 +39,15 @@ function HomeScreen() {
             />
           </div>
         </button>
-        <p className="text-content">Person Mode detected</p>
-        <br />
-        <p className="text-content"> July 4 2023 @ 4:45pm </p>
+        <p
+          style={{ fontWeight: "bold", marginBottom: "30" }}
+          className="text-content"
+        >
+          Person Mode detected
+        </p>
+        <p style={{ marginBottom: 0 }} className="text-content">
+          July 4, 2023 @ 4:45pm
+        </p>
       </div>
     </div>
   );
