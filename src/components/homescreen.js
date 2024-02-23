@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Switch from "@mui/material/Switch";
 import ".././css/homescreen.css";
@@ -8,18 +8,48 @@ import FirstThumbnail from ".././images/logo.png";
 
 function HomeScreen() {
   const navigate = useNavigate();
+  const [isArmed, setIsArmed] = useState(false);
+
+  const handleSwitchToggle = () => {
+    setIsArmed((prevIsArmed) => !prevIsArmed);
+  };
+
   return (
-    <div className="container">
+    <div className="container" style={{ paddingBottom: "20px" }}>
+      {/* Adjusted paddingBottom */}
       <div className="title">
         <h1>Security System Admin Panel</h1>
-        <div className="switch-container">
+        <div
+          className={`switch-container ${
+            isArmed ? "switch-container-red" : ""
+          }`}
+        >
           <h2>
-            System is <span style={{ color: "red" }}>Armed</span>
+            System is{" "}
+            <span style={{ color: isArmed ? "red" : "inherit" }}>Armed</span>
           </h2>
-          <Switch color="secondary" />
+          <Switch
+            sx={{
+              "& .MuiSwitch-thumb": {
+                color: "red",
+              },
+              "& .MuiSwitch-track": {
+                backgroundColor: "red",
+              },
+            }}
+            checked={isArmed}
+            onChange={handleSwitchToggle}
+          />
         </div>
       </div>
-
+      {/* logs text and nummber list  
+      <div style={{ flexDirection: "row" }} className="logs">
+        <h2>Logs</h2>
+      </div>
+      <div className="helo">
+        <h2>Helo</h2>
+      </div> */}
+      {/* Card for motion detection */}
       <div className="card">
         <button
           onClick={() => navigate("/video")}
