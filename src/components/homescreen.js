@@ -49,6 +49,7 @@ function HomeScreen() {
       <div className="helo">
         <h2>Helo</h2>
       </div> */}
+
       {/* Card for motion detection */}
       <div className="card">
         <button
@@ -70,7 +71,11 @@ function HomeScreen() {
           </div>
         </button>
         <p
-          style={{ fontWeight: "bold", marginBottom: "30" }}
+          style={{
+            fontWeight: "bold",
+            marginBottom: "30",
+            flexDirection: "row",
+          }}
           className="text-content"
         >
           Person Mode detected
