@@ -73,12 +73,20 @@ function HomeScreen() {
           </div>
         </button>
         <div className="text-content">
-          <p style={{ fontWeight: "bold", marginBottom: "5px" }}>
+          <p
+            style={{
+              fontWeight: "bold",
+              marginBottom: "30px",
+              fontSize: "150%",
+            }}
+          >
             Person Mode detected
           </p>
-          <p style={{ marginBottom: 0 }}>July 4, 2023 @ 4:45pm</p>
+          <p style={{ marginBottom: "10px" }}>July 4, 2023 @ 4:45pm</p>
         </div>
       </div>
+
+      {/* second Card for motion detection */}
     </div>
   );
 }
